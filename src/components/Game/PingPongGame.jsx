@@ -1,16 +1,15 @@
- 
 // components/Game/PingPongGame.jsx
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useGameLoop } from '../../hooks/useGameLoop';
 import { useKeyPress } from '../../hooks/useKeyPress';
 import { calculateBallPhysics } from '../../utils/physics';
 import { CONSTANTS } from '../../utils/constants';
 import { Ball } from './Ball';
-import { Paddle } from './Paddle';
+import Paddle from './Paddle';  // Remove curly braces
 import { Scoreboard } from './Scoreboard';
 import { GameControls } from './GameControls';
 
-export const PingPongGame = () => {
+const PingPongGame = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [playerScore, setPlayerScore] = useState(0);
   const [aiScore, setAiScore] = useState(0);
@@ -46,7 +45,6 @@ export const PingPongGame = () => {
   const updateGame = useCallback(() => {
     if (!isPlaying) return;
 
-    // Update player paddle
     if (upPressed) {
       setPlayerPaddlePos(prev => 
         Math.max(0, prev - CONSTANTS.PADDLE_SPEED)
@@ -59,7 +57,6 @@ export const PingPongGame = () => {
       );
     }
 
-    // Update AI paddle
     const aiTarget = ballPos.y - CONSTANTS.PADDLE_HEIGHT / 2;
     const aiMove = Math.sign(aiTarget - aiPaddlePos) * CONSTANTS.AI_SPEED;
     setAiPaddlePos(prev => 
@@ -69,7 +66,6 @@ export const PingPongGame = () => {
       )
     );
 
-    // Update ball
     const { position, velocity } = calculateBallPhysics(
       ballPos,
       ballVelocity,
@@ -80,7 +76,6 @@ export const PingPongGame = () => {
     setBallPos(position);
     setBallVelocity(velocity);
 
-    // Check for scoring
     if (position.x <= 0) {
       setAiScore(prev => prev + 1);
       resetBall();
@@ -113,7 +108,6 @@ export const PingPongGame = () => {
           height: CONSTANTS.TABLE_HEIGHT,
         }}
       >
-        {/* Net */}
         <div 
           className="absolute left-1/2 top-0 w-1 h-full bg-white opacity-50"
           style={{ transform: 'translateX(-50%)' }}

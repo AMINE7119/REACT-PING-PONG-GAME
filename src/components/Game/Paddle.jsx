@@ -1,6 +1,8 @@
- 
-// components/Game/Paddle.jsx
-export const Paddle = ({ position, side }) => (
+import { CONSTANTS } from '../../utils/constants';
+
+// Change from export const to export default
+export default function Paddle({ position, side }) {
+  return (
     <div
       className="absolute bg-white"
       style={{
@@ -11,3 +13,4 @@ export const Paddle = ({ position, side }) => (
       }}
     />
   );
+}

@@ -7,3 +7,4 @@ export const GameControls = ({ onStart, onPause, isPlaying }) => (
       </Button>
     </div>
   );
+  import { Button } from '../UI/Button';

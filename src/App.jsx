@@ -1,4 +1,4 @@
-// App.jsx 
+// App.jsx
 import PingPongGame from './components/Game/PingPongGame'
 
 function App() {
