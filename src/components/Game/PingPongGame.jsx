@@ -1,11 +1,10 @@
-// components/Game/PingPongGame.jsx
 import React, { useState, useCallback } from 'react';
 import { useGameLoop } from '../../hooks/useGameLoop';
 import { useKeyPress } from '../../hooks/useKeyPress';
 import { calculateBallPhysics } from '../../utils/physics';
 import { CONSTANTS } from '../../utils/constants';
 import { Ball } from './Ball';
-import Paddle from './Paddle';  // Remove curly braces
+import Paddle from './Paddle';
 import { Scoreboard } from './Scoreboard';
 import { GameControls } from './GameControls';
 

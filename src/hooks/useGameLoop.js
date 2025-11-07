@@ -1,4 +1,3 @@
- 
 import { useEffect, useRef } from 'react';
 
 export const useGameLoop = (callback, fps = 60) => {

@@ -1,5 +1,3 @@
- 
-// components/UI/Button.jsx
 export const Button = ({ onClick, children }) => (
     <button
       onClick={onClick}

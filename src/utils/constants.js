@@ -1,5 +1,3 @@
- 
-// utils/constants.js
 export const CONSTANTS = {
     PADDLE_HEIGHT: 100,
     PADDLE_WIDTH: 20,

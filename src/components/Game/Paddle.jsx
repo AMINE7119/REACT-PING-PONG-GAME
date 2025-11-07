@@ -1,6 +1,5 @@
 import { CONSTANTS } from '../../utils/constants';
 
-// Change from export const to export default
 export default function Paddle({ position, side }) {
   return (
     <div

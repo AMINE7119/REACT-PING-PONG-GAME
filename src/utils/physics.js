@@ -1,5 +1,3 @@
- 
-// utils/physics.js
 import { CONSTANTS } from './constants';
 
 export const calculateBallPhysics = (ballPos, ballVelocity, paddleLeft, paddleRight) => {

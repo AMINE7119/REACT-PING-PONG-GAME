@@ -1,4 +1,3 @@
-// Ball.jsx
 import { CONSTANTS } from '../../utils/constants';
 
 export const Ball = ({ position }) => (

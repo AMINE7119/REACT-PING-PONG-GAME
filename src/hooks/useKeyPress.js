@@ -1,5 +1,3 @@
- 
-// hooks/useKeyPress.js
 import { useState, useEffect } from 'react';
 
 export const useKeyPress = (targetKey) => {
