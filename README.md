@@ -118,6 +118,26 @@ Contributions are welcome! Feel free to submit issues or pull requests.
 
 This project is open source and available under the MIT License.
 
+## 🔒 Security
+
+This is a **frontend-only** application with no backend, database, or external API calls. Security considerations:
+
+✅ **Already Secure:**
+- No hardcoded secrets or API keys
+- No sensitive data handling
+- No user authentication
+- No external dependencies on services requiring credentials
+- `.env` properly ignored in `.gitignore` (if extended with backend in future)
+
+⚠️ **If Extended with Backend:**
+- Use environment variables for API endpoints
+- Never store tokens in localStorage (use HTTP-only cookies)
+- Implement CORS properly
+- Validate all user input server-side
+- Use HTTPS in production
+
+See [SECURITY.md](./SECURITY.md) for detailed security practices if this project is extended.
+
 ## Acknowledgments
 
 Built with modern React practices and hooks for a smooth gaming experience.
